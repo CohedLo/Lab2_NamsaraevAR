@@ -45,7 +45,6 @@ namespace RegisterTest
         [TestCase("user@mail.ru", "True", "OK")]
         [TestCase("user@gmail.com", "True", "OK")]
         [TestCase("user@yandex.ru", "True", "OK")]
-        //[TestCase("us@mail.ru", "False", "Email не удовлетворяет общему формату xxx@xxx.xxx")]
         public void TestCheckLoginContent(string phone, string str1, string str2)
         {
             var expected1 = str1;

@@ -46,10 +46,10 @@ namespace TriangleTest
         public void TestCheckEquilateral(string a, string b, string c)
         {
             var expectedType = "равносторонний";
-            //var expectedList = new List<(int, int)> { (0, 0), (100, 0), (50, 0) };
+            var expectedList = new List<(int, int)> { (0, 0), (100, 0), (50, 0) };
             (var s, var d) = Triangle.GetTriangleData(a, b, c);
             Assert.That(s, Is.EqualTo(expectedType));
-            //CollectionAssert.AreEquivalent(expectedList, d);
+            CollectionAssert.AreEquivalent(expectedList, d);
         }
 
         [TestCase("1", "2", "2")]
@@ -58,10 +58,8 @@ namespace TriangleTest
         public void TestCheckIsosceles(string a, string b, string c)
         {
             var expectedType = "равнобедренный";
-            //var expectedList = new List<(int, int)> { (0, 0), (100, 0), (50, 0) };
             (var s, var d) = Triangle.GetTriangleData(a, b, c);
             Assert.That(s, Is.EqualTo(expectedType));
-            //CollectionAssert.AreEquivalent(expectedList, d);
         }
 
         [TestCase("4", "5", "6")]
@@ -70,10 +68,8 @@ namespace TriangleTest
         public void TestCheckScalene(string a, string b, string c)
         {
             var expectedType = "разносторонний";
-            //var expectedList = new List<(int, int)> { (0, 0), (100, 0), (50, 0) };
             (var s, var d) = Triangle.GetTriangleData(a, b, c);
             Assert.That(s, Is.EqualTo(expectedType));
-            //CollectionAssert.AreEquivalent(expectedList, d);
         }
     }
 }
